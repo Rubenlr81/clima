@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js" defer></script>
+  <title>Estado del tiempo</title>
+</head>
+
+<body>
+  <main>
+    <div class="search-form">
+      <form id="search-form">
+        <div class="searchbox">
+          <input type="text" autocomplete="off" placeholder="Introduce la ciudad..." class="search" id="searchbox" />
+        </div>
+      </form>
+    </div>
+    <div class="weather-card" id="card">
+      <div class="ciudad" id="city">Leon, GTO</div>
+      <div class="fecha" id="date">
+        <script>
+          date = new Date();
+          year = date.getFullYear();
+          month = date.getMonth() + 1;
+          day = date.getDate();
+          document.getElementById("date").innerHTML = month + "/" + day + "/" + year;
+        </script>        
+      </div>
+      <div class="temperatura">
+        <img src="images/temp-media.png" class="temp-img" id="temp-img" />
+        <div class="temp" id="temp">14c</div>
+      </div>
+      <div class="clima" id="weather">Sol</div>
+      <div class="range" id="range">12c / 18c</div>
+    </div>
+  </main>
+  <footer>
+    <p>Rubén López - Web</p>    
+  </footer>
+</body>
+</html>
